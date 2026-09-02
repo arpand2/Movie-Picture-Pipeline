@@ -30,7 +30,7 @@ COPY Pipfile Pipfile.lock ./
 
 # Install Python dependencies
 # Using --ignore-pipfile to avoid lock file platform issues
-RUN pipenv install --system --deploy --ignore-pipfile
+RUN pipenv install --system --deploy 
 
 # Copy the rest of the application
 COPY . .

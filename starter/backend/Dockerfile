@@ -20,5 +20,5 @@ COPY Pipfile* /app
 RUN cd /app && pipenv install --system --deploy
 
 COPY . /app
-
+WORKDIR /app
 CMD ["flask", "--app", ".", "run", "--host=0.0.0.0", "--port=5000"]
